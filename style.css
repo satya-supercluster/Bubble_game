@@ -122,15 +122,15 @@ body{
     }
 }
 @media (max-width:500px){
-    /* #window{
+    .window{
         width:90vw;
-    } */
+    }
     /* #ginfo{
         height:15vh;
     } */
     #ginfo .part{
         width:20%;
-        font-size:.8em;
+        font-size:1.2em;
     }
     #bubbles{
         margin: 5px 5px;
