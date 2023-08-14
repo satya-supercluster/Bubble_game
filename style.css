@@ -14,7 +14,7 @@ body{
     align-items: center;
     justify-content: center;
     gap:40px;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 .window{
     height:80vh;
@@ -25,7 +25,6 @@ body{
 }
 #ginfo{
     /* height:7.5vh; */
-    width:100%;
     /* background-color:rgb(28, 76, 127); */
     background-color: rgb(151, 196, 236);
     display: flex;
@@ -63,6 +62,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap:10px;
+    justify-content: space-between;
 }
 #bubble{
     height:55px;
@@ -101,4 +101,48 @@ body{
     font-size: 2em;
     border-radius: 20px;
     cursor:pointer;
+}
+@media (max-width:900px){
+    .part{
+        width:40%;
+        flex-direction: column;
+        margin: 0;
+    }
+    .part h2{
+        font-size: 1em;
+    }
+    .values{
+        font-size: 1em;
+        height:30px;
+        width:30px;
+    }
+    #bubble{
+        height:30px;
+        width:30px;
+    }
+}
+@media (max-width:500px){
+    /* #window{
+        width:90vw;
+    } */
+    /* #ginfo{
+        height:15vh;
+    } */
+    #ginfo .part{
+        width:20%;
+        font-size:.8em;
+    }
+    #bubbles{
+        margin: 5px 5px;
+        padding: 5px 5px;
+    }
+    .btn{
+        padding:5px 10px;
+        font-size: 1.2em;
+    }
+    .result{
+        font-size: 1.2em;
+        height: 40vh;
+        width:50vw;
+    }
 }
