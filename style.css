@@ -21,7 +21,8 @@ body{
 #rules p{
     font-size: 1.2em;
     text-align: center;
-    font-weight: 700;;
+    font-weight: 800;
+    color:aliceblue;
 }
 .window{
     height:80vh;
