@@ -6,7 +6,7 @@ function target_maker() {
   document.querySelector("#targetc").textContent = target;
 }
 function update_score() {
-  score += 10;
+  score += 1;
   document.querySelector("#scorec").textContent = score;
 }
 function bubble_maker() {
@@ -36,7 +36,7 @@ document.querySelector("#bubbles").addEventListener("click", (prop) => {
     target_maker();
     bubble_maker();
   } else if (score > 0) {
-    score -= 15;
+    score -= 2;
     update_score();
   }
 });
@@ -45,7 +45,7 @@ document.querySelector(".btn").addEventListener("click", () => {
   clearInterval(timer);
   game_time();
   target_maker();
-  score = -10;
+  score = -1;
   update_score();
   let res = document.querySelector(".result");
   res.textContent = ``;
