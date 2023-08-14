@@ -80,7 +80,7 @@ body{
     height:30vh;
     width:30vw;
     position: absolute;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     border-radius: 12px;
     z-index: -1;
     display:flex;
@@ -103,6 +103,9 @@ body{
     cursor:pointer;
 }
 @media (max-width:900px){
+    .window{
+        width:75vw;
+    }
     .part{
         width:40%;
         flex-direction: column;
