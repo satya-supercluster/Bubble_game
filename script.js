@@ -1,5 +1,6 @@
 var score = 0;
 let target;
+var timer;
 function target_maker() {
   target = Math.round(Math.random() * 100) % 11;
   document.querySelector("#targetc").textContent = target;
@@ -18,7 +19,7 @@ function bubble_maker() {
 }
 function game_time() {
   let time = 60;
-  var timer = setInterval(() => {
+  timer = setInterval(() => {
     if (time == 0) {
       clearInterval(timer);
       let res = document.querySelector(".result");
@@ -41,6 +42,7 @@ document.querySelector("#bubbles").addEventListener("click", (prop) => {
 });
 document.querySelector(".btn").addEventListener("click", () => {
   bubble_maker();
+  clearInterval(timer);
   game_time();
   target_maker();
   score = -10;
