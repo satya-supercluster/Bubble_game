@@ -1,2 +1,2 @@
-# Bubble_game
+# Bubble_Game
 JS Practice Project Game
