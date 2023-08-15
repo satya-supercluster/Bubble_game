@@ -17,6 +17,9 @@ body{
 }
 #rules{
     margin:15px;
+    padding:10px;
+    outline:5px solid #1cb1c2;
+    border-radius: 15px;
 }
 #rules p{
     font-size: 1.2em;
@@ -31,6 +34,8 @@ body{
     border-radius: 12px;
     overflow: hidden;
     margin-top: 20px;
+    border:5px solid transparent;
+    outline:3px solid rgb(228, 7, 173);
 }
 #ginfo{
     /* height:7.5vh; */
@@ -85,6 +90,10 @@ body{
     text-align: center;
     cursor: pointer;
 }
+#bubble:hover{
+    color:aliceblue;
+    background-color: rgb(9, 49, 65);
+}
 .result{
     height:30vh;
     width:30vw;
@@ -111,6 +120,10 @@ body{
     font-size: 2em;
     border-radius: 20px;
     cursor:pointer;
+    border:3px solid black;
+}
+.btn:hover{
+    background-color: bisque;
 }
 @media (max-width:900px){
     .window{
@@ -156,6 +169,6 @@ body{
     .result{
         font-size: 1.2em;
         height: 40vh;
-        width:50vw;
+        width:70vw;
     }
 }
