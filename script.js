@@ -1,6 +1,6 @@
 var score = 0;
 let target;
-var timer;
+var timer,time;
 function target_maker() {
   target = Math.round(Math.random() * 100) % 11;
   document.querySelector("#targetc").textContent = target;
@@ -18,19 +18,22 @@ function bubble_maker() {
   document.querySelector("#bubbles").innerHTML = bubbles;
 }
 function game_time() {
-  let time = 60;
+  time = 60;
   timer = setInterval(() => {
+    if(time==60){
+      document.querySelector("#bubbles").addEventListener("click", check);
+    }
     if (time == 0) {
       clearInterval(timer);
       let res = document.querySelector(".result");
       res.textContent = `Score: ${score}`;
       res.classList.add("show");
+      document.querySelector("#bubbles").removeEventListener("click", check);
     }
-    document.querySelector("#timec").textContent = time;
-    time--;
+    document.querySelector("#timec").textContent = --time;
   }, 1000);
 }
-document.querySelector("#bubbles").addEventListener("click", (prop) => {
+function check(prop){
   if (target == Number(prop.target.textContent)) {
     update_score();
     target_maker();
@@ -39,7 +42,7 @@ document.querySelector("#bubbles").addEventListener("click", (prop) => {
     score -= 2;
     update_score();
   }
-});
+}
 document.querySelector(".btn").addEventListener("click", () => {
   bubble_maker();
   clearInterval(timer);
