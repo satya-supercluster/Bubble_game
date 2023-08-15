@@ -30,6 +30,7 @@ function game_time() {
       res.classList.add("show");
       document.querySelector("#bubbles").removeEventListener("click", check);
     }
+    if(time>0)
     document.querySelector("#timec").textContent = --time;
   }, 1000);
 }
